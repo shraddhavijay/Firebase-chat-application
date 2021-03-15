@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+/* font for heading text font-family: 'Philosopher', sans-serif; */
+/* font for paragraph text font-family: 'Nunito', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#mine-loader{display: none;}
+#loading-screen {
+   
+    height: 100%;
+    width: 100%;
+    background-color:#DADED4;
+    position: fixed !important;
+    z-index:10000;
+    
+}
+#loading-screen img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading-screen-ldbar{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #39603D;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);}
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+body{background-color:#DADED4 !important;}
+#mine-navigation-bar{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color:#DADED4 !important;
+}
+.nav-link{color: #39603D !important; font-family: 'Nunito', sans-serif; text-align: center;}
+.navbar-toggler {border: none !important; outline: none !important;}
+.fa-bars {border: none; outline: none; color:#39603D !important;}
+.navbar-brand {color: #39603D !important; font-family: 'Nunito', sans-serif;}
+
+/* START INDEX PAGE - CONTENT SECTION  */
+#content{text-align: left;}
+#content img{
+    height: 350px;
+    width: 400px;
+    animation:  imageAnimation 2s alternate forwards infinite;
+    margin-top: 6rem;
+}
+/* @keyframes imageAnimation{
+    50%{
+        transform: translateY(-5px);
+       
+    }
+    100%{
+        transform: translateY(5px);
+    
+    }
+} */
+#content h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3rem;
+    color: #3c403D; 
+    margin-top:10rem;
+}
+#content p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #39603d;
+}
+.mine-btn{
+    height: 3rem;
+    width: 9rem;
+    display: block !important;
+    background-color: #39603D;
+    margin-top: 1rem;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    
+    border-top-right-radius: 4rem !important;
+    border-bottom-right-radius: 2rem !important;
+    border-top-left-radius: 1rem !important;
+    border-bottom-left-radius: 2rem !important;
+}
+
+
+/* START SIGNUP PAGE  */
+
+#signup-form-container {text-align: left;}
+#signup-content img {
+ height: 100%;
+ width: 100%;
+ margin-top: 4rem;
+ animation:  imageAnimation 2s alternate forwards infinite;
+}
+#signup-content h1  {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2rem;
+    color: #3c403D; 
+}
+#signup-content h3 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1rem;
+    color: #3c403D; 
+    margin-top: 6rem;
+}
+#signup-content p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #39603d;
+}
+.form-group input{
+    border: none !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #39603D !important;
+    font-family: 'Nunito', sans-serif;
+}
+input:focus{
+   border: none !important;
+   outline: none !important;
+   border-bottom: 2px solid #39603D !important;
+   box-shadow: none !important;
+}
+.form-check {
+    display: inline !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* START SIGN IN PAGE */
+
+#signin-content img{
+    margin-top: 4rem;
+    height: auto;
+    width: 100%;
+    animation:  imageAnimation 2s alternate forwards infinite;
+}
+#signin-content h2{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3rem;
+    color: #3c403D; 
+    margin-top: 6rem;
+}
+#signin-content p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #39603d;
+    margin-top: 1rem;
+}
+a{text-decoration: none !important;}
+
+/* START CHAT HOME PAGE */
+
+#chat-home-content {background-color: #DADED4;}
+#chat-home-content h1 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3rem;
+    color: #3c403D; 
+    margin-top: 7rem;
+}
+.current-user-avatar {
+    height: 100px;
+    width: 100px;
+    background-color: #39603D;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'Philosopher', sans-serif;
+    display: inline-block;
+    margin-top: 5rem;
+}
+#genrate-avatar {
+    font-size: 3rem;
+    margin: 1rem;
+}
+#current-user-fullName {
+    font-family: 'Philosopher', sans-serif;
+}
+#chat-home-content img {
+   height: 200px;
+   width: 200px;
+   margin-top: 3rem;
+}
+#chat-home-content p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #39603d;
+}
+#chat-box-container{
+    background-color: #fff;
+    border-radius: 4rem;
+    height:500px; 
+    padding: 30px;
+}
+#chat-box{
+    overflow-y:scroll;
+    height: 450px;
+}
+#time {
+    display: block;
+    text-align: center;
+    margin: 0;
+    font-size: 0.8rem;
+}
+#input {
+    background-position:fixed;
+    margin-top: 1rem;
+}
+#message-input{
+    border: 2px solid #39603D;
+    background-color: #fff;
+    padding: 20px;
+    color: #39603D;
+    
+    padding: 0rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.users-messages{ 
+    background-color: #39603D;
+    margin: 1rem; 
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    color: #fff;
+    overflow:hidden;
+    text-overflow:ellipsis; 
+    width:60%;
+    border-radius: 0.9rem;
+}
+.mine-messages{
+    background-color: #3c403D  !important;
+    overflow: hidden;
+    text-align: left;
+    margin-top:1rem;
+    margin-left:auto !important; 
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3rem;
+    padding: 10px;
+    color: #fff;
+  
+    overflow:hidden;
+    text-overflow:ellipsis; 
+    width:60%;
+    border-radius: 0.9rem;
+}
+.user-name {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    display: block;
+    margin-right : 10px;
+    margin-top: 0;
+}
+.print-time {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 0.9rem;
+    color: #fff;
+    /* float: right; */
+    display: block;
+    margin: auto;
+    padding-left: 1rem;
+}
+.user-avatar {
+    height: 60px;
+    width: 60px;
+    background-color:#3c403D;
+    border-radius: 50%;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: -2rem;
+}
+.user-avatar-txt{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.3rem;
+}
+#user-input {
+    border: none !important;
+    margin-top:0.7rem;
+    width: 80%;
+    box-shadow: none;
+    font-family: 'Nunito', sans-serif;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.send-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;height: auto;
+    height: auto;
+    width: auto;
+    
+    cursor: pointer;
+}
+.fa-paper-plane {font-size: 1.5rem; margin-top:0.5rem;}
+.bottom-line {background-color: #3c403D; width: 50%; height: 0.1rem; border-radius: 2rem; margin-left: auto; margin-right: auto;}

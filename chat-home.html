@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/quantumalert.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="loading-screen">
+      <div class="loading-content">
+          <img src="./img/logo.png" alt="logo">
+          <div class="lds-ellipsis" id="loading-screen-ldbar"><div></div><div></div><div></div><div></div></div>
+      </div>
+  </div>
+    <header>
+        <div id="mine-navigation-bar">
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="chat-home.html"><img src="./img/logo.png" alt="logo" height="50px" width="50px"></a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <i class="fas fa-bars"></i>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                 <li class="nav-item active">
+                   <a class="nav-link" href="#" onclick="logout(event)">Log out</a>
+                 </li>
+                </ul>
+             </div>
+           </nav>
+           <!-- CLOSE NAVIGATION -->
+        </div>
+    </header>
+    <main>
+        <section id="chat-home-content">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-6">
+                    <div class="current-user-avatar wow rotateIn" data-wow-duration="1s" data-wow-delay="1">
+                        <h2 id="genrate-avatar"></h2>
+                    </div>
+                    <h2 id="current-user-fullName" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0"></h2>
+                    <p id="current-user-email" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0"></p>
+                 </div>
+                   <div class="col-md-6">
+                       <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">All Messages </h1>
+                       <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0">Chat & find new friends now with chat web app room!<br>Our chat room will help you stay connected & discover new friends.</p>
+                   </div>
+               </div>
+           </div>
+        </section>
+        <section id="chat-box-container">
+            <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                   <div id="chat-box">
+                       <ul id="messages">
+                          
+                         </ul>
+                   </div>
+                </div>
+                 </div>
+             </div>
+        </section>
+        <section id="input">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="message-input">
+                          <div class="form-group">
+                              <textarea   type="text" class="form-control" id="user-input"  placeholder="Enter Your Message" cols="2" rows="2"></textarea>
+                              <!-- <input type="text" class="form-control" id="user-input"  placeholder="Enter Your Message"> -->
+                              <button type="submit" class="send-btn" onclick="sendMessage(event)"><i class="far fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                        <hr class="bottom-line">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+      <script src="./js/firebaseinit.js"></script>
+      <script src="./js/chat-home.js"></script>
+      <script src="./js/quantumalert.js"></script>
+      <script src="./js/wow.min.js"></script>
+      <script>
+      new WOW().init();
+      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
